@@ -24,7 +24,7 @@ export const RoomTable: React.FC<IRoomTable> = ({
       Available Rooms
     </h2>
 
-    <div className="flex items-end gap-3 justify-end px-4 my-4">
+    <div className="flex gap-3 justify-end px-4 my-4">
       <div className="w-32">
         <InputField
           label="Filter by Capacity"
@@ -35,14 +35,15 @@ export const RoomTable: React.FC<IRoomTable> = ({
           placeholder="e.g., 10"
         />
       </div>
-
-      <button
-        onClick={() => setFilterCapacity("")}
-        className="text-sm px-3 py-2 rounded-md border border-gray-300 hover:bg-gray-100 transition text-gray-600 h-fit mt-6"
-        disabled={!filterCapacity}
-      >
-        Clear
-      </button>
+      <div>
+        <button
+          onClick={() => setFilterCapacity("")}
+          className="text-sm px-3 py-2 rounded-md border border-gray-300 hover:bg-gray-100 transition text-gray-600 h-fit mt-6"
+          disabled={!filterCapacity}
+        >
+          Clear
+        </button>
+      </div>
     </div>
     {rooms.length === 0 ? (
       <p className="p-4 text-sm text-gray-500">No rooms added yet.</p>
