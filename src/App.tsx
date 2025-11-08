@@ -12,7 +12,7 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-linear-to-br from-indigo-100 via-purple-50 to-pink-100 p-10">
       <div className="max-w-6xl mx-auto bg-white/80 backdrop-blur-lg p-8 rounded-2xl shadow-xl">
         <h1 className="text-4xl font-bold text-center text-indigo-600 mb-10">
-          Meeting Room Scheduler
+          🏢 Meeting Room Scheduler
         </h1>
 
         <RoomManagement onRoomsChange={setRooms} />
