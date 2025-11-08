@@ -27,7 +27,7 @@ const BookingTable: React.FC<BookingTableProps> = ({
         <p className="p-4 text-sm text-gray-500">No bookings yet.</p>
       ) : (
         <table className="w-full text-sm text-left border-collapse bg-white rounded-xl shadow-md">
-          <thead className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white">
+          <thead className="bg-linear-to-r from-indigo-500 to-purple-500 text-white">
             <tr>
               <th className="p-3">Room</th>
               <th className="p-3">Date</th>

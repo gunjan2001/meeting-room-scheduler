@@ -228,7 +228,7 @@ const BookingForm: React.FC<BookingFormProps> = ({
 
       <button
         type="submit"
-        className="px-6 py-2 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-medium hover:opacity-90 transition"
+        className="px-6 py-2 rounded-lg bg-linear-to-r from-indigo-500 to-purple-500 text-white font-medium hover:opacity-90 transition"
       >
         {editingBooking ? "Update Booking" : "Add Booking"}
       </button>

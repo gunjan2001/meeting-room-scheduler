@@ -87,7 +87,7 @@ const RoomForm: React.FC<RoomFormProps> = ({ onSave, editingRoom }) => {
       <div className="flex gap-3 self-end md:self-auto md:mt-0"> 
         <button
           type="submit"
-          className="px-5 py-2 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-medium shadow-md hover:opacity-90 transition"
+          className="px-5 py-2 rounded-lg bg-linear-to-r from-indigo-500 to-purple-500 text-white font-medium shadow-md hover:opacity-90 transition"
         >
           {editingRoom ? "Update Room" : "Add Room"}
         </button>
