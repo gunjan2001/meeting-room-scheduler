@@ -10,7 +10,9 @@ interface RoomFormProps {
 const RoomForm: React.FC<RoomFormProps> = ({ onSave, editingRoom }) => {
   const [name, setName] = useState("");
   const [capacity, setCapacity] = useState("");
-  const [errors, setErrors] = useState<{ name?: string; capacity?: string }>({});
+  const [errors, setErrors] = useState<{ name?: string; capacity?: string }>(
+    {}
+  );
 
   useEffect(() => {
     if (editingRoom) {
@@ -56,7 +58,7 @@ const RoomForm: React.FC<RoomFormProps> = ({ onSave, editingRoom }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="grid grid-cols-1 md:grid-cols-3 gap-6 items-end"
+      className="grid grid-cols-1 md:grid-cols-3 gap-6 "
     >
       {/* Room Name */}
       <div>
@@ -84,21 +86,24 @@ const RoomForm: React.FC<RoomFormProps> = ({ onSave, editingRoom }) => {
       </div>
 
       {/* Buttons */}
-      <div className="flex gap-3 self-end md:self-auto md:mt-0"> 
-        <button
-          type="submit"
-          className="px-5 py-2 rounded-lg bg-linear-to-r from-indigo-500 to-purple-500 text-white font-medium shadow-md hover:opacity-90 transition"
-        >
-          {editingRoom ? "Update Room" : "Add Room"}
-        </button>
-
-        <button
-          type="button"
-          onClick={handleClear}
-          className="px-5 py-2 rounded-lg border border-gray-300 text-gray-600 font-medium hover:bg-gray-100 transition"
-        >
-          Clear
-        </button>
+      <div className="flex gap-3 self-end md:self-auto md:mt-0 items-center">
+        <div>
+          <button
+            type="submit"
+            className="px-5 py-2 rounded-lg bg-linear-to-r from-indigo-500 to-purple-500 text-white font-medium shadow-md hover:opacity-90 transition"
+          >
+            {editingRoom ? "Update Room" : "Add Room"}
+          </button>
+        </div>
+        <div>
+          <button
+            type="button"
+            onClick={handleClear}
+            className="px-5 py-2 rounded-lg border border-gray-300 text-gray-600 font-medium hover:bg-gray-100 transition"
+          >
+            Clear
+          </button>
+        </div>
       </div>
     </form>
   );
